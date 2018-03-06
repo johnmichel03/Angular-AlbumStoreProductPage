@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 import { ProductService } from "./product.service";
+import{NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ProductService } from "./product.service";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NgxPaginationModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

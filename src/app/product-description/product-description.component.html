@@ -8,3 +8,11 @@
     <p class="album-release-date">{{albumInfo?.album.releaseDate}}</p>
   </div>
 </div>
+<div class="row">
+  <ul>
+  <li *ngFor="let item of pagedData|paginate:{itemsPerPage:itemsPerPage,currentPage:page}">{{item}}</li>
+</ul>
+
+<pagination-controls (pageChange)="pageClicked($event)"></pagination-controls>
+</div>
+
